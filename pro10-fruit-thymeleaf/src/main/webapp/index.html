@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+<h1 id="title">Fruit Manage Center</h1>
+
+<div id="container">
+    <table id="showingTable">
+        <tr>
+            <td>Name</td>
+            <td>Price</td>
+            <td>Stock</td>
+            <td>Comment</td>
+            <td>Operation</td>
+        </tr>
+        <tr th:if="${#lists.isEmpty(session.fruitList)}">
+            <td>sorry stock is empty!</td>
+        </tr>
+        <tr th:unless="${#lists.isEmpty(session.fruitList)}" th:each="fruit : ${session.fruitList}">
+        <td th:text="${fruit.name}">Apple</td>
+        <td th:text="${fruit.price}">3.78</td>
+        <td th:text="${fruit.stock}">4000</td>
+        <td th:text="${fruit.comment}">goodgood</td>
+        </tr>
+        <tr>
+            <td>sd</td>
+            <td>sd</td>
+            <td>sd</td>
+        </tr>
+
+
+    </table>
+</div>
+
+</body>
+</html>

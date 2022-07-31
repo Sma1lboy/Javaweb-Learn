@@ -1,0 +1,9 @@
+body {
+    background-color: beige;
+}
+#title {
+    text-align: center;
+}
+#showingTable {
+    border-style: solid;
+}
