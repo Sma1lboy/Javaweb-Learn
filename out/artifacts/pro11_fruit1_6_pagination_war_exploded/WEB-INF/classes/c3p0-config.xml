@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<c3p0-config>
+    <named-config name="helloc3p0">
+<!--        提供获取链接的4个基本信息-->
+        <property name="driverClass">org.postgresql.Driver</property>
+        <property name="jdbcUrl">jdbc:postgresql://localhost:5432/fruit</property>
+        <property name="user">jacksonchen</property>
+        <property name="password">password</property>
+<!--        进行数据库链接池的基本信息-->
+<!--            要求的增长数 当链接池当中的链接数不够了， c3p0一次像数据库申请的连接数-->
+        <property name="acquireIncrement">5</property>
+<!--            c3p0初始化时的接池容量-->
+        <property name="initialPoolSize">10</property>
+<!--            c3p0数据库连接池维护的最少的最小的一个连接数-->
+        <property name="minPoolSize">10</property>
+<!--            c3p0数据库连接池维护的最多的一个连接数-->
+        <property name="maxPoolSize">100</property>
+<!--            c3p0数据库连接池最多维护的Statement的个数 -->
+        <property name="maxStatements">50</property>
+<!--            每个连接中可以最多使用的Statement个数-->
+        <property name="maxStatementsPerConnection">5</property>
+    </named-config>
+</c3p0-config>

@@ -11,11 +11,8 @@ table, th, td {
 body {
     background-color: navajowhite;
 }
-a {
-    text-decoration: none;
-}
 
-.delImg{
+.delimg{
     width: 30px;
     height: 30px;
     display: grid;

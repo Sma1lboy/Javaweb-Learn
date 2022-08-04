@@ -13,7 +13,7 @@
 <h1 id="title">Fruit Manage Center</h1>
 
 <div id="container">
-    <div style="border: 0px solid red; width: 80%; text-align: right">
+    <div style="border: 0px solid red; width: 60%; text-align: right">
         <a th:href="@{/add.do}" style="border: 0px solid blue;">add new fruit</a>
     </div>
     <table id="showingTable">
@@ -36,6 +36,12 @@
             <td><img src="assit/deltag.png" class="delImg" th:onclick="|delFruit(${fruit.id})|"></td>
         </tr>
     </table>
+    <div style="margin-left: 40%" class="center">
+        <input type="button" value="First page" class="btn" th:onclick="|page(${1})|" th:disabled="${session.pageNo == 1}">
+        <input type="button" value="Prev page" class="btn" th:onclick="|page(${session.pageNo - 1})|" th:disabled="${session.pageNo == 1}">
+        <input type="button" value="Next page" class="btn" th:onclick="|page(${session.pageNo + 1})|" th:disabled="${session.pageNo == session.pageCount}">
+        <input type="button" value="Last page" class="btn" th:onclick="|page(${session.pageCount})|" th:disabled="${session.pageNo == session.pageCount}">
+    </div>
 
 
 
