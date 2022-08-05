@@ -1,17 +1,17 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="pro11-fruit1.6-pagination:war exploded">
-    <output-path>$PROJECT_DIR$/pro11-fruit1.6-pagination/target/pro10-fruit-thymeleaf-1.0-SNAPSHOT</output-path>
+  <artifact type="exploded-war" name="pro13-fruit1.8-mvc:war exploded">
+    <output-path>$PROJECT_DIR$/pro13-fruit1.8-mvc/target/pro13-fruit1.8-mvc-1.0-SNAPSHOT</output-path>
     <properties id="maven-jee-properties">
       <options>
         <exploded>true</exploded>
-        <module>pro11-fruit1.6-pagination</module>
+        <module>pro13-fruit1.8-mvc</module>
         <packaging>war</packaging>
       </options>
     </properties>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="pro11-fruit1.6-pagination" />
+          <element id="module-output" name="pro13-fruit1.8-mvc" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-simple:2.0.0-alpha0" />
@@ -39,9 +39,9 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/pro11-fruit1.6-pagination/target/pro10-fruit-thymeleaf-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/pro13-fruit1.8-mvc/target/pro13-fruit1.8-mvc-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="pro11-fruit1.6-pagination/web/Web" />
+      <element id="javaee-facet-resources" facet="pro13-fruit1.8-mvc/web/Web" />
     </root>
   </artifact>
 </component>
