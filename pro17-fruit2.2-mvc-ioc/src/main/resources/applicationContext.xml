@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<beans>
+<!--    这个bean标签作用是 servletpath中涉及名字对应是fruit， 那就要找FruitController这个类来处理-->
+    <bean id="fruit" class="me.jackson.pro17fruitthymeleaf.fruit.controllers.FruitController"></bean>
+</beans>
+
+<!--
+1.概念
+    HTML:超文本标记语言
+    XML:可扩展的标记语言
+    HTML是XML的一个子集
+2.XML包含三个部分：
+    1.XML申明 必须在第一行
+    2. DTD(document type definition) 文档类型定义
+    3. XML正文
+    -->

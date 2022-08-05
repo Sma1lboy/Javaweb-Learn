@@ -1,0 +1,30 @@
+table, th, td {
+    border: 1px solid black;
+}
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+#showingTable {
+    margin-left: auto;
+    margin-right: auto;
+}
+#title {
+    text-align: center;
+}
+.w20 {
+    font-weight: bold;
+}
+body {
+    background-color: navajowhite;
+}
+a {
+    text-decoration: none;
+}
+
+.delImg{
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-items: center;
+}

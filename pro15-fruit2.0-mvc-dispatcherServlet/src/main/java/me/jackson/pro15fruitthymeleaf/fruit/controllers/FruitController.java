@@ -1,60 +1,28 @@
-package me.jackson.pro13fruitthymeleaf.fruit.servlets;
+package me.jackson.pro15fruitthymeleaf.fruit.controllers;
 
-import me.jackson.pro13fruitthymeleaf.fruit.dao.impl.FruitDAOImpl;
-import me.jackson.pro13fruitthymeleaf.fruit.pojo.Fruit;
-import me.jackson.pro13fruitthymeleaf.util.StringUtil;
+import me.jackson.pro15fruitthymeleaf.fruit.dao.impl.FruitDAOImpl;
+import me.jackson.pro15fruitthymeleaf.fruit.pojo.Fruit;
+import me.jackson.pro15fruitthymeleaf.fruit.springmvc.ViewBaseServlet;
+import me.jackson.pro15fruitthymeleaf.util.StringUtil;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.math.BigDecimal;
 import java.util.List;
 
 //FruitServlet作 分包
-@WebServlet("/fruit.do")
-public class FruitServlet extends ViewBaseServlet {
+public class FruitController extends ViewBaseServlet {
     private FruitDAOImpl dao = new FruitDAOImpl();
+    private ServletContext servletContext;
 
-    @Override
-    protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        //endcoding
-        req.setCharacterEncoding("UTF-8");
-
-        String operate = req.getParameter("operate");
-        if (StringUtil.isEmpty(operate)) {
-            operate = "index";
-        }
-
-        //optimazation reflection version 3
-        try {
-            Method method = this.getClass().getDeclaredMethod(operate, HttpServletRequest.class, HttpServletResponse.class);
-
-            if( method != null) {
-                method.invoke(this, req, resp);
-            }
-        } catch (NoSuchMethodException | InvocationTargetException | IllegalAccessException e) {
-            throw new RuntimeException(e);
-        }
-
-        //redundant version 2 reflection
-//        for(Method method : methods) {
-//            String methodName = method.getName();
-//            if(methodName.equals(operate)) {
-//                try {
-//                    method.invoke(this, req, resp);
-//                } catch (Exception e) {
-//                    throw new RuntimeException(e);
-//                }
-//            }
-//        }
-
+    public void setServletContext(ServletContext servletContext) throws ServletException {
+        this.servletContext = servletContext;
+        super.init(servletContext);
     }
-
 
     private void update(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");

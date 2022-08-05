@@ -27,25 +27,11 @@ public class FruitServlet extends ViewBaseServlet {
         if (StringUtil.isEmpty(operate)) {
             operate = "index";
         }
-        switch (operate) {
-            case "index":
-                index(req,resp);
-                break;
-            case "add":
-                add(req,resp);
-                break;
-            case "del":
-                delete(req, resp);
-                break;
-            case "edit":
-                edit(req, resp);
-                break;
-            case "insert":
-                insert(req, resp);
-                break;
-            case "update":
-                update(req, resp);
-                break;
+
+        try {
+            this.getClass().getDeclaredMethod(operate, HttpServletRequest.class, HttpServletResponse.class);
+        } catch (NoSuchMethodException e) {
+            throw new RuntimeException(e);
         }
 
     }

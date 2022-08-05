@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="pro16-fruit2.1-mvc-controller:war">
+    <output-path>$PROJECT_DIR$/pro16-fruit2.1-mvc-controller/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>pro16-fruit2.1-mvc-controller</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="pro16-fruit2.1-mvc-controller-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="pro16-fruit2.1-mvc-controller:war exploded" />
+    </root>
+  </artifact>
+</component>
