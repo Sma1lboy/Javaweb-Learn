@@ -94,18 +94,28 @@ public class DispatcherServlet extends ViewBaseServlet {
         }
 
         try {
+            //methods的原因是 当我们获取特定的method的时候 我们需要对method参数传入特定的class
+            //但是我们不知道我们访问的是哪一个method， 每个method传入的值不一样， 所以我们需要通过iteration去找到
+            //我们的method
+
+            //通过反射 获取到current controller组件
             Method[] methods = controllerBeanObj.getClass().getDeclaredMethods();
             for(Method method : methods) {
+                //找到method
                 if(operate.equals(method.getName())) {
                     //1.统一获取请求参数
                     //获取当前方法的参数数组
-
                     Parameter[] parameters = method.getParameters();
-//            parameters[0].getName()
+                    //为每个参数数组填入相应的value
                     Object[] parametersValues = new Object[parameters.length];
+                    //go through every parameter index
                     for (int i = 0; i < parameters.length; i++) {
-                        //参数
+                        //获取参数
                         Parameter parameter = parameters[i];
+                        //获取参数的名字
+                        //注意 需要通过java compiler 添加参数 -parameters 去获取参数的世纪名字
+                        //要不就会显示"arg"+ [i]
+                        //加了以后会显示参数 类 地址 e.g java.lang.Integer
                         String parameterName = parameter.getName();
 
                         //如果参数名是request response session,那么就不是通过请求参数获取的
@@ -117,10 +127,12 @@ public class DispatcherServlet extends ViewBaseServlet {
                             parametersValues[i] = resp;
                         } else {
                             //从请求中获取跟参数对应的value
+                            //注意 获取到的value都是 String
                             String parameterValue = req.getParameter(parameterName);
                             //获取到String 但不一定能直接往values里面放
                             String typeName = parameter.getType().getName();
 
+                            //获取的value不一定是String 所以我们需要把它转换成我们需要的类型
                             Object parameterObj = parameterValue;
 
                             if(parameterObj != null) {
@@ -138,7 +150,7 @@ public class DispatcherServlet extends ViewBaseServlet {
                     //Controller组件中的方法调用
                     //把private 打开
                     method.setAccessible(true);
-                    //call method
+                    //call method 执行方法
                     Object methodReturnValueObj = method.invoke(controllerBeanObj, parametersValues);
                     //获取method 返回的值 判断进行客户端重定向还是内部转发
                     //again with thymelaef 内部转发都是thymeleaf渲染， 客户端重定向不是
