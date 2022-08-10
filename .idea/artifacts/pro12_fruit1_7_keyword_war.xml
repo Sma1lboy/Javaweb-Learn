@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="pro12-fruit1.7-keyword:war">
+    <output-path>$PROJECT_DIR$/pro12-fruit1.7-keyword/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>pro12-fruit1.7-keyword</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="pro10-fruit-thymeleaf-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="pro12-fruit1.7-keyword:war exploded" />
+    </root>
+  </artifact>
+</component>

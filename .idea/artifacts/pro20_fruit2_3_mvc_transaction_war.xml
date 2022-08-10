@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="pro20-fruit2.3-mvc-transaction:war">
+    <output-path>$PROJECT_DIR$/pro20-fruit2.3-mvc-transaction/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>pro20-fruit2.3-mvc-transaction</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="pro20-fruit2.3-mvc-transaction-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="pro20-fruit2.3-mvc-transaction:war exploded" />
+    </root>
+  </artifact>
+</component>

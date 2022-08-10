@@ -17,6 +17,9 @@
         <option value="$PROJECT_DIR$/pro14-fruit1.9-mvc-reflect/pom.xml" />
         <option value="$PROJECT_DIR$/pro16-fruit2.1-mvc-controller/pom.xml" />
         <option value="$PROJECT_DIR$/pro17-fruit2.2-mvc-ioc/pom.xml" />
+        <option value="$PROJECT_DIR$/pro18-servlet-api/pom.xml" />
+        <option value="$PROJECT_DIR$/pro20-fruit2.3-mvc-transaction/pom.xml" />
+        <option value="$PROJECT_DIR$/pro19-filter-listener/pom.xml" />
       </list>
     </option>
   </component>

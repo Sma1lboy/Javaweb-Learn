@@ -37,7 +37,7 @@ public class DispatcherServlet extends ViewBaseServlet {
 
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setCharacterEncoding("UTF-8");
+//        req.setCharacterEncoding("UTF-8");
 
 
         //url is localhost:5432/pro15/hello.do
