@@ -20,7 +20,13 @@
         <option value="$PROJECT_DIR$/pro18-servlet-api/pom.xml" />
         <option value="$PROJECT_DIR$/pro20-fruit2.3-mvc-transaction/pom.xml" />
         <option value="$PROJECT_DIR$/pro19-filter-listener/pom.xml" />
+        <option value="$PROJECT_DIR$/pro20-fruit2.3-mvc-transaction/pro21-qqzone1/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/pro21-qqzone1/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="zulu-17" project-jdk-type="JavaSDK">

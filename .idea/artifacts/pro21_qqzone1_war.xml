@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="pro21-qqzone1:war">
+    <output-path>$PROJECT_DIR$/pro20-fruit2.3-mvc-transaction/pro21-qqzone1/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>pro21-qqzone1</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="pro21-qqzone1-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="pro21-qqzone1:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <beans>
-    <bean id="fruitDAO" class="me.jackson.pro17fruitthymeleaf.   fruit.dao.impl.FruitDAOImpl"/>
+    <bean id="fruitDAO" class="me.jackson.pro17fruitthymeleaf.fruit.dao.impl.FruitDAOImpl"/>
 
     <bean id="fruitService" class="me.jackson.pro17fruitthymeleaf.fruit.service.impl.FruitServiceImpl">
 <!--        property标签表示属性名， ref表示引用其他bean的id值-->
