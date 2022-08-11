@@ -56,6 +56,7 @@ public class DispatcherServlet extends ViewBaseServlet {
         //通过名字找到对应的controller
         Object controllerBeanObj = beanFactory.getBean(servletPath);
 
+
         //通过xml获取到该对象的值后， 再通过object class 的反射到该位置的 method
 
         String operate = req.getParameter("operate");

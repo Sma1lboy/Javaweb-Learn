@@ -1,4 +1,4 @@
-package me.jackson.pro17fruitthymeleaf.util.io;
+package me.jackson.pro17fruitthymeleaf.util.ioc;
 
 /**
  * @author Jackson Chen

@@ -1,4 +1,4 @@
-package me.jackson.pro17fruitthymeleaf.util.io;
+package me.jackson.pro17fruitthymeleaf.util.ioc;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -21,11 +21,19 @@ import java.util.Map;
 public class ClassPathXmlApplicationContext implements  BeanFactory{
     private Map<String, Object> beanMap = new HashMap<>();
 
+    private String path = "aplicationContext.xml";
     public ClassPathXmlApplicationContext(){
+        this("applicationContext.xml");
+    }
+    public ClassPathXmlApplicationContext(String path){
+
+        if(path.isEmpty()) {
+            throw new RuntimeException("IOC container config wrong path");
+        }
         //加载配置文件  读取XML类内元素列表 再获取元素的值 把各个bean元素的id和class 对应起来
         //
         try {
-            URL resource = this.getClass().getClassLoader().getResource("/applicationContext.xml");
+            URL resource = this.getClass().getClassLoader().getResource("/" + path);
             FileInputStream is = new FileInputStream(resource.getPath());
 
             //使用documentBuilderFactory to create DocumentBuilder

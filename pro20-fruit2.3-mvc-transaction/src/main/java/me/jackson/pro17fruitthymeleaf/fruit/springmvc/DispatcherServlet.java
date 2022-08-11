@@ -1,26 +1,17 @@
 package me.jackson.pro17fruitthymeleaf.fruit.springmvc;
 
 import me.jackson.pro17fruitthymeleaf.util.StringUtil;
-import me.jackson.pro17fruitthymeleaf.util.io.BeanFactory;
-import me.jackson.pro17fruitthymeleaf.util.io.ClassPathXmlApplicationContext;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
+import me.jackson.pro17fruitthymeleaf.util.ioc.BeanFactory;
+import me.jackson.pro17fruitthymeleaf.util.ioc.ClassPathXmlApplicationContext;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.*;
 import java.lang.reflect.Method;
 import java.lang.reflect.Parameter;
 import java.math.BigDecimal;
-import java.net.URL;
-import java.util.HashMap;
-import java.util.Map;
 
 @WebServlet("*.do")
 public class DispatcherServlet extends ViewBaseServlet {
@@ -32,7 +23,13 @@ public class DispatcherServlet extends ViewBaseServlet {
     }
     public void init() throws ServletException {
         super.init();
-        beanFactory = new ClassPathXmlApplicationContext();
+        Object beanFactoryObj = getServletContext().getAttribute("beanFactory");
+        if(beanFactoryObj != null) {
+            beanFactory = (BeanFactory) beanFactoryObj;
+        } else  {
+            throw new RuntimeException("IOC container get incorrect");
+        }
+//        beanFactory = new ClassPathXmlApplicationContext();
     }
 
     @Override
