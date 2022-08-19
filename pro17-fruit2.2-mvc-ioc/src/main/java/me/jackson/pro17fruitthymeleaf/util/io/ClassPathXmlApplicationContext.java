@@ -1,5 +1,6 @@
 package me.jackson.pro17fruitthymeleaf.util.io;
 
+import org.junit.Test;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -21,6 +22,12 @@ import java.util.Map;
 public class ClassPathXmlApplicationContext implements  BeanFactory{
     private Map<String, Object> beanMap = new HashMap<>();
 
+    @Test
+    public void test(){
+        String path = this.getClass().getClassLoader().getResource("/applicationContext.xml").getPath();
+        System.out.println(path);
+//        new ClassPathXmlApplicationContext();
+    }
     public ClassPathXmlApplicationContext(){
         //加载配置文件  读取XML类内元素列表 再获取元素的值 把各个bean元素的id和class 对应起来
         //

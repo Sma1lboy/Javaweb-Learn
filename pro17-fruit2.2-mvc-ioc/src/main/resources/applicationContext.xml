@@ -10,8 +10,6 @@
         <property name="dao" ref="fruitDAO"/>
     </bean>
 <!-- 这个bean标签作用是 servletpath中涉及名字对应是fruit， 那就要找FruitController这个类来处理-->
-
-
     <bean id="fruit" class="me.jackson.pro17fruitthymeleaf.fruit.controllers.FruitController">
         <property name="fruitService" ref="fruitService"/>
     </bean>

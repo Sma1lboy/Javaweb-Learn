@@ -1,34 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/javaweb-servlet/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/javaweb-servlet/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/pro09-fruit-thymeleaf/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/pro09-fruit-thymeleaf/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/pro10-fruit-thymeleaf/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/pro10-fruit-thymeleaf/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/pro11-fruit1.6-pagination/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/pro11-fruit1.6-pagination/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/pro12-fruit1.7-keyword/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/pro12-fruit1.7-keyword/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/pro13-fruit1.8-mvc/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/pro13-fruit1.8-mvc/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/pro14-fruit1.9-mvc-reflect/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/pro14-fruit1.9-mvc-reflect/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/pro15-fruit2.0-mvc-dispatcherServlet/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/pro15-fruit2.0-mvc-dispatcherServlet/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/pro16-fruit2.1-mvc-controller/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/pro16-fruit2.1-mvc-controller/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/pro17-fruit2.2-mvc-ioc/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/pro17-fruit2.2-mvc-ioc/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/pro18-servlet-api/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/pro18-servlet-api/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/pro19-filter-listener/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/pro19-filter-listener/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/pro20-fruit2.3-mvc-transaction/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/pro20-fruit2.3-mvc-transaction/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro21-qqzone1/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro21-qqzone1/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro22-qqzone1/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro22-qqzone1/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<beans>
+    <bean id="userBasicDAO" class="me.jackson.pro21qqzone1.qqzone.dao.impl.UserBasicDAOImpl"/>
+    <bean id="topicDAO" class="me.jackson.pro21qqzone1.qqzone.dao.impl.TopicDAOImpl"/>
+    <bean id="userBasicService" class="me.jackson.pro21qqzone1.qqzone.service.impl.UserBasicServiceImpl">
+        <property name="userBasicDAO" ref="userBasicDAO"/>
+    </bean>
+    <bean id="topicService" class="me.jackson.pro21qqzone1.qqzone.service.impl.TopicServiceImpl">
+        <property name="topicDAO" ref="topicDAO"/>
+    </bean>
+    <bean id="user" class="me.jackson.pro21qqzone1.qqzone.controller.UserController">
+        <property name="userBasicService" ref="userBasicService"/>
+        <property name="topicService" ref="topicService"/>
+    </bean>
+    <bean id="page" class="me.jackson.pro21qqzone1.myssm.springmvc.PageController"/>
+</beans>
+

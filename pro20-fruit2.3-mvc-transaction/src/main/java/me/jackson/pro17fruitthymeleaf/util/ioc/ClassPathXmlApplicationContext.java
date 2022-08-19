@@ -66,7 +66,6 @@ public class ClassPathXmlApplicationContext implements  BeanFactory{
             for(int i = 0; i < beanNodeLists.getLength(); i++) {
                 Node beanNode = beanNodeLists.item(i);
                 if(beanNode.getNodeType() == Node.ELEMENT_NODE) {
-
                     Element beanElement = (Element) beanNode;
                     String beanId = beanElement.getAttribute("id");
                     NodeList beanChildNodeList = beanElement.getChildNodes();

@@ -1,9 +1,8 @@
 package me.jackson.pro17fruitthymeleaf.fruit.service.impl;
 
 import me.jackson.pro17fruitthymeleaf.fruit.dao.FruitDAO;
-import me.jackson.pro17fruitthymeleaf.fruit.service.FruitService;
-import me.jackson.pro17fruitthymeleaf.fruit.dao.impl.FruitDAOImpl;
 import me.jackson.pro17fruitthymeleaf.fruit.pojo.Fruit;
+import me.jackson.pro17fruitthymeleaf.fruit.service.FruitService;
 
 import java.util.List;
 
@@ -18,8 +17,10 @@ public class FruitServiceImpl implements FruitService {
     private final int PAGE_COUNT = 5;
     @Override
     public List<Fruit> getFruitList(String keyword, Integer pageNo) {
+
         return dao.getFruitList(keyword, pageNo);
     }
+
 
     @Override
     public void addFruit(Fruit fruit) {

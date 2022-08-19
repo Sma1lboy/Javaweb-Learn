@@ -4,6 +4,7 @@ import me.jackson.pro17fruitthymeleaf.fruit.dao.FruitDAO;
 import me.jackson.pro17fruitthymeleaf.fruit.dao.base.BaseDAO;
 import me.jackson.pro17fruitthymeleaf.fruit.pojo.Fruit;
 
+import java.sql.Connection;
 import java.util.List;
 
 public class FruitDAOImpl extends BaseDAO<Fruit> implements FruitDAO {

@@ -2,6 +2,7 @@ package me.jackson.pro17fruitthymeleaf.fruit.dao;
 
 import me.jackson.pro17fruitthymeleaf.fruit.pojo.Fruit;
 
+import java.sql.Connection;
 import java.util.List;
 
 public interface FruitDAO {

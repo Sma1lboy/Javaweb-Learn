@@ -1,11 +1,10 @@
 package me.jackson.pro17fruitthymeleaf.fruit.dao.impl;
 
 import me.jackson.pro17fruitthymeleaf.fruit.dao.FruitDAO;
-import me.jackson.pro17fruitthymeleaf.fruit.dao.base.BaseDAO;
+import me.jackson.pro17fruitthymeleaf.util.base.BaseDAO;
 import me.jackson.pro17fruitthymeleaf.fruit.exceptions.FruitDAOException;
 import me.jackson.pro17fruitthymeleaf.fruit.pojo.Fruit;
 
-import java.sql.SQLException;
 import java.util.List;
 
 public class FruitDAOImpl extends BaseDAO<Fruit> implements FruitDAO {
