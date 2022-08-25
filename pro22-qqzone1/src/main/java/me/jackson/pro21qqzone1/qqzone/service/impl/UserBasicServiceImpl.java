@@ -2,7 +2,9 @@ package me.jackson.pro21qqzone1.qqzone.service.impl;
 
 import me.jackson.pro21qqzone1.myssm.util.JDBCUtils;
 import me.jackson.pro21qqzone1.qqzone.dao.UserBasicDAO;
+import me.jackson.pro21qqzone1.qqzone.pojo.Topic;
 import me.jackson.pro21qqzone1.qqzone.pojo.UserBasic;
+import me.jackson.pro21qqzone1.qqzone.service.TopicService;
 import me.jackson.pro21qqzone1.qqzone.service.UserBasicService;
 
 import java.sql.Connection;
@@ -17,6 +19,8 @@ import java.util.List;
 public class UserBasicServiceImpl implements UserBasicService {
 
     private UserBasicDAO userBasicDAO = null;
+    private TopicService topicService = null;
+
 
     //login只管登陆 做登陆验证
     @Override
@@ -30,6 +34,17 @@ public class UserBasicServiceImpl implements UserBasicService {
             conn.setAutoCommit(false);
             //content
             user = userBasicDAO.getUserBasic(conn, loginId, pwd);
+
+            if (user != null) {
+                //获取好友列表
+                List<UserBasic> friendsList = getFriendsList(user);
+                //获取当前user的日志列表
+                List<Topic> topicList = topicService.getTopicList(user);
+                //将好友和日志列表加入到现有的user里面
+                user.setFriendList(friendsList);
+                user.setTopicList(topicList);
+            }
+
 
             conn.commit();
         } catch (Exception e) {

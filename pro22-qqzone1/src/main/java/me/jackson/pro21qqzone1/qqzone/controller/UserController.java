@@ -30,16 +30,6 @@ public class UserController {
         UserBasic userBasic = userBasicService.login(loginId, pwd);
         //如果用户不为空
         if(userBasic != null) {
-            //获取好友列表
-            List<UserBasic> friendsList = userBasicService.getFriendsList(userBasic);
-            //获取当前user的日志列表
-            List<Topic> topicList = topicService.getTopicList(userBasic);
-            //将好友和日志列表加入到现有的user里面
-            userBasic.setFriendList(friendsList);
-            userBasic.setTopicList(topicList);
-            //当user登陆账户后 整个session都是基于这个user 所以要传到会话作用域而不是请求作用域
-
-            //userBasic保存的是登陆者的信息
             session.setAttribute("userBasic", userBasic);
             //friend保存的是当前进入的是谁的空间
             session.setAttribute("friend", userBasic);

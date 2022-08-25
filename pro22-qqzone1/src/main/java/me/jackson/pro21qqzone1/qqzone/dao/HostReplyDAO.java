@@ -12,4 +12,6 @@ import java.sql.Connection;
 public interface HostReplyDAO {
 
     HostReply getHostReplyByReplyId(Connection conn, Integer replyId);
+
+    void delHostReplyById(Connection conn, Integer hostReplyId);
 }

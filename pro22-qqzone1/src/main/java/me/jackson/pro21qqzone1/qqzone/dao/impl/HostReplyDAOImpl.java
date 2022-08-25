@@ -19,4 +19,9 @@ public class HostReplyDAOImpl extends BaseDAO<HostReply> implements HostReplyDAO
         return getInstance(conn, url, replyId);
     }
 
+    @Override
+    public void delHostReplyById(Connection conn, Integer hostReplyId) {
+
+        update(conn, "delete from t_host_reply where id = ?", hostReplyId);
+    }
 }

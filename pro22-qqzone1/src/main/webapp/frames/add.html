@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<!--    <link rel="stylesheet" th:href="@{/css/common.css}">-->
+<!--    <link rel="stylesheet" th:href="@{/css/detail.css}">-->
+    <meta charset="UTF-8">
+    <title>Add Topic</title>
+</head>
+<body>
+<div id="Container">
+    <div id="div_add_reply">
+        <p class="add_reply_title">添加日志</p>
+        <form th:action="@{|/topic.do|}" method="post">
+            <input type="hidden" name="operate" value="addNewTopic">
+            <input type="hidden" name="userId" th:value="${session.userBasic.id}">
+<!--            <input type="hidden" name="topicId" th:value="">-->
+            <table>
+                <tr>
+                    <th style="width: 25%">日志名：</th>
+                    <td><input type="text" name="title"/></td>
+                </tr>
+                <tr>
+                    <th>内容：</th>
+                    <td><textarea rows="3" name="content"></textarea></td>
+                </tr>
+                <tr>
+                    <th colspan="2">
+                        <input type="submit" value=" 回 复 "/>
+                        <input type="reset" value=" 重 置 "/>
+                    </th>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+</body>
+</html>

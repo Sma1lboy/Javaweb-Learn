@@ -1,6 +1,7 @@
 package me.jackson.pro21qqzone1.qqzone.pojo;
 
-import java.util.Date;
+
+import java.sql.Date;
 
 /**
  * @author Jackson Chen
@@ -16,6 +17,13 @@ public class Reply {
     private HostReply hostReply; // 1 : 1
 
     public Reply() {
+    }
+
+    public Reply(String content, Date replyDate, UserBasic author, Topic topic) {
+        this.content = content;
+        this.replyDate = replyDate;
+        this.author = author;
+        this.topic = topic;
     }
 
     public Reply(Integer id) {

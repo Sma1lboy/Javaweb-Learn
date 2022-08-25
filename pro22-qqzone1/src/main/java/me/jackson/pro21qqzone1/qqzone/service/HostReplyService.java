@@ -9,4 +9,5 @@ import me.jackson.pro21qqzone1.qqzone.pojo.HostReply;
  */
 public interface HostReplyService {
     HostReply getHostReplyByReplyId(Integer replyId);
+    void delHostReplyById(Integer hostReplyId);
 }

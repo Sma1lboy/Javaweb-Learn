@@ -41,4 +41,13 @@ public class HostReplyServiceImpl implements HostReplyService {
         }
         return hostReply;
     }
+
+    @Override
+    public void delHostReplyById(Integer hostReplyId) {
+        try {
+            hostReplyDAO.delHostReplyById(JDBCUtils.getConnection(), hostReplyId);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

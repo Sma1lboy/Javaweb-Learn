@@ -25,12 +25,12 @@ public class TopicDAOImpl extends BaseDAO<Topic> implements TopicDAO {
 
     @Override
     public void addTopic(Connection conn, UserBasic userBasic, Topic topic) {
-
+        update(conn, "insert into t_topic(title, content, topic_date, author) values(?,?,?,?)", topic.getTitle(), topic.getContent(), topic.getTopicDate(), topic.getAuthor().getId());
     }
 
     @Override
     public void delTopic(Connection conn, Topic topic) {
-
+        update(conn, "delete from t_topic where id=?", topic.getId());
     }
 
     @Override

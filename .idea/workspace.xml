@@ -20,6 +20,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -47,18 +48,20 @@
     <option name="showLibraryContents" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/jacksonchen/Documents/workspace_java/JavawebDemo",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15332031",
-    "project.structure.side.proportion": "0.37126437",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/jacksonchen/Documents/workspace_java/JavawebDemo&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15332031&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.37126437&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -67,7 +70,6 @@
   <component name="RunManager">
     <configuration name="Tomcat 8.5.79" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.79" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/pro22/page.do?operate=page&amp;page=login" />
-      <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="pro22-qqzone1:war exploded">
           <settings>
@@ -167,7 +169,18 @@
       <workItem from="1660837400385" duration="513000" />
       <workItem from="1660839414717" duration="33000" />
       <workItem from="1660851294997" duration="8174000" />
-      <workItem from="1660859778426" duration="2621000" />
+      <workItem from="1660859778426" duration="11471000" />
+      <workItem from="1660930066834" duration="16170000" />
+      <workItem from="1661007705529" duration="8000" />
+      <workItem from="1661038763856" duration="41000" />
+      <workItem from="1661038812631" duration="16000" />
+      <workItem from="1661038850775" duration="27000" />
+      <workItem from="1661038889868" duration="127000" />
+      <workItem from="1661039029684" duration="36000" />
+      <workItem from="1661039084354" duration="456000" />
+      <workItem from="1661039550289" duration="78000" />
+      <workItem from="1661039637159" duration="707000" />
+      <workItem from="1661092312335" duration="49000" />
     </task>
     <servers />
   </component>
@@ -177,35 +190,30 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint type="javascript">
-          <url>file://$PROJECT_DIR$/pro22-qqzone1/src/main/webapp/index.html</url>
-          <line>11</line>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/pro22-qqzone1/src/main/java/me/jackson/pro21qqzone1/qqzone/controller/ReplyController.java</url>
+          <line>25</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/pro22-qqzone1/src/main/java/me/jackson/pro21qqzone1/qqzone/controller/UserController.java</url>
-          <line>51</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/pro22-qqzone1/src/main/java/me/jackson/pro21qqzone1/qqzone/controller/UserController.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/pro22-qqzone1/src/main/java/me/jackson/pro21qqzone1/qqzone/controller/TopicController.java</url>
+          <url>file://$PROJECT_DIR$/pro22-qqzone1/src/main/java/me/jackson/pro21qqzone1/qqzone/dao/impl/ReplyDAOImpl.java</url>
           <line>32</line>
-          <option name="timeStamp" value="8" />
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/pro22-qqzone1/src/main/java/me/jackson/pro21qqzone1/qqzone/controller/TopicController.java</url>
-          <line>23</line>
+          <line>47</line>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/pro22-qqzone1/src/main/java/me/jackson/pro21qqzone1/qqzone/dao/impl/TopicDAOImpl.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/JavawebDemo$Tomcat_8_5_79.ic" NAME="Tomcat 8.5.79 Coverage Results" MODIFIED="1660778750452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/JavawebDemo$Tomcat_8_5_79.ic" NAME="Tomcat 8.5.79 Coverage Results" MODIFIED="1660932473463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

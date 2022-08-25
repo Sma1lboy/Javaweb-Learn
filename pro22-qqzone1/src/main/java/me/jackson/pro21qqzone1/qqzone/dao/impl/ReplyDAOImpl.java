@@ -6,6 +6,7 @@ import me.jackson.pro21qqzone1.qqzone.pojo.Reply;
 import me.jackson.pro21qqzone1.qqzone.pojo.Topic;
 
 import java.sql.Connection;
+import java.time.Instant;
 import java.util.List;
 
 /**
@@ -27,12 +28,19 @@ public class ReplyDAOImpl extends BaseDAO<Reply> implements ReplyDAO {
     }
 
     @Override
-    public void addReply(Topic topic, Reply reply) {
+    public void addReply(Connection conn, Reply reply) {
+        String url = "insert into t_reply(content, reply_date, author, topic) values(?,?,?,?)";
+        update(conn, url, reply.getContent(), reply.getReplyDate(), reply.getAuthor().getId(), reply.getTopic().getId());
 
     }
 
     @Override
-    public void delReplyById(Integer id) {
+    public void delReplyById(Connection conn, Integer Id) {
+        update(conn, "delete from t_reply where id=?", Id);
+    }
 
+    @Override
+    public Reply getReplyById(Connection conn, Integer id) {
+        return getInstance(conn, "select id, content, reply_date \"replyDate\", author, topic from t_reply where id= ?", id);
     }
 }

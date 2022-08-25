@@ -5,6 +5,7 @@
     <bean id="topicDAO" class="me.jackson.pro21qqzone1.qqzone.dao.impl.TopicDAOImpl"/>
     <bean id="userBasicService" class="me.jackson.pro21qqzone1.qqzone.service.impl.UserBasicServiceImpl">
         <property name="userBasicDAO" ref="userBasicDAO"/>
+        <property name="topicService" ref="topicService"/>
     </bean>
 
 
@@ -16,10 +17,12 @@
     <bean id="replyService" class="me.jackson.pro21qqzone1.qqzone.service.impl.ReplyServiceImpl">
         <property name="replyDAO" ref="replyDAO"/>
         <property name="hostReplyService" ref="hostReplyService"/>
+        <property name="userBasicService" ref="userBasicService"/>
     </bean>
     <bean id="topicService" class="me.jackson.pro21qqzone1.qqzone.service.impl.TopicServiceImpl">
         <property name="topicDAO" ref="topicDAO"/>
         <property name="replyService" ref="replyService"/>
+        <property name="userBasicService" ref="userBasicService"/>
     </bean>
 
 <!--    Controller -->
@@ -31,5 +34,8 @@
         <property name="topicService" ref="topicService"/>
     </bean>
     <bean id="page" class="me.jackson.pro21qqzone1.myssm.springmvc.PageController"/>
+    <bean id ="reply" class="me.jackson.pro21qqzone1.qqzone.controller.ReplyController">
+        <property name="replyService" ref="replyService"/>
+    </bean>
 </beans>
 

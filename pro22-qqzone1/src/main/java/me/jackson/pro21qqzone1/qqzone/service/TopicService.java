@@ -14,4 +14,9 @@ public interface TopicService {
     List<Topic> getTopicList( UserBasic userBasic);
 
     Topic getTopicById(Integer Id);
+    Topic getTopic(Integer Id);
+    void addTopic(UserBasic userBasic, Topic topic);
+
+
+    void delTopicById(Integer topicId);
 }

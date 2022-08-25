@@ -14,4 +14,9 @@ import java.util.List;
 public interface ReplyService {
     //get according to topic's id
     List<Reply> getReplys(Integer topicId);
+    void addReply(Reply reply);
+
+    void delReply(Integer replyId);
+
+    void delReplyList(Topic topic);
 }

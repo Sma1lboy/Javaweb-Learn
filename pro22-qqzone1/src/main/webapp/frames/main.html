@@ -5,11 +5,21 @@
     <title>Title</title>
     <link rel="stylesheet" th:href="@{/css/common.css}">
     <link rel="stylesheet" th:href="@{/css/main.css}">
+    <script>
+        function delTopic(topicId) {
+            if(window.confirm("sure to del?")) {
+                window.location.href='topic.do?operate=delTopic&topicId=' + topicId;
+            }
+        }
+        function addTopic() {
+
+        }
+    </script>
 </head>
 <body>
     <div id="div_topic_list">
         <div id="div_to_add">
-            <p class="right8">发表新日志</p>
+            <p class="right8" th:if="${session.userBasic.id == session.friend.id}"><a th:href="@{/page.do?operate=page&page=frames/add}">发表新日志</a></p>
         </div>
         <table id="tbl_topic_list">
             <tr>
@@ -19,13 +29,14 @@
                 <th>操作</th>
             </tr>
             <tr th:if="${#lists.isEmpty(session.friend.topicList)}">
-                <td>暂无日志列表</td>
+                <td colspan="4">暂无日志列表</td>
             </tr>
             <tr th:unless="${#lists.isEmpty(session.friend.topicList)}" th:each="topic : ${session.friend.topicList}">
                 <td th:text="${topic.id}">2</td>
                 <td class="left"><a th:href="@{|/topic.do?operate=topicDetail&id=${topic.id}|}" th:text="${topic.title}">我乔峰要走，你们谁可阻拦</a></td>
                 <td th:text="${topic.topicDate}">2021-09-01 12:30:55</td>
-                <td>删除</td>
+<!--                bug-->
+                <td><a th:if="${session.userBasic.id==session.friend.id}" th:onclick="|delTopic(${topic.id})|" target="_top">删除</a></td>
             </tr>
         </table>
     </div>

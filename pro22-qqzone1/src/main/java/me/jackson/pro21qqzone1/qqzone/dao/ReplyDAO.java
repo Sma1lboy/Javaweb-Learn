@@ -16,9 +16,11 @@ public interface ReplyDAO {
     List<Reply> getReplys(Connection conn, Topic topic);
     List<Reply> getReplysById(Connection conn, Integer id);
 
-    void addReply(Topic topic, Reply reply);
+    Reply getReplyById(Connection conn, Integer id);
 
-    void delReplyById(Integer id);
+    void addReply(Connection conn, Reply reply);
+
+    void delReplyById(Connection conn, Integer id);
 
 
 }
