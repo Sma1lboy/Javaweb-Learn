@@ -131,12 +131,10 @@ public abstract class BaseDAO<T> {
                 for(int i = 0 ; i< cols; i++) {
                     //get the spicific data column
                     Object columnValue = rs.getObject(i + 1);
-
                     //获取每个列的列名字
                     String columnName = metaData.getColumnLabel(i + 1);
                     //gei fruit spicific columnName to value
                     setValue(t, columnName, columnValue);
-
                 }
                 return t;
             }

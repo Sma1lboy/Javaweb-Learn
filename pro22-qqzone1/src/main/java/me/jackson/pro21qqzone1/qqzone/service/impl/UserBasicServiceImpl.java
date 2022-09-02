@@ -2,6 +2,7 @@ package me.jackson.pro21qqzone1.qqzone.service.impl;
 
 import me.jackson.pro21qqzone1.myssm.util.JDBCUtils;
 import me.jackson.pro21qqzone1.qqzone.dao.UserBasicDAO;
+import me.jackson.pro21qqzone1.qqzone.dao.impl.UserBasicDAOImpl;
 import me.jackson.pro21qqzone1.qqzone.pojo.Topic;
 import me.jackson.pro21qqzone1.qqzone.pojo.UserBasic;
 import me.jackson.pro21qqzone1.qqzone.service.TopicService;
